@@ -74,13 +74,14 @@ class OPTTokenizer(BytePairTokenizer):
         self,
         vocabulary,
         merges,
+        start_token = "</s>",
+        pad_token = "<pad>",
+        end_token = "</s>",
         **kwargs,
     ):
         # Special tokens. We use `"</s>"` as both a start and end token, as OPT
         # was only pre-trained with `"</s>"` marking document boundaries.
-        start_token = "</s>"
-        pad_token = "<pad>"
-        end_token = "</s>"
+        
 
         super().__init__(
             vocabulary=vocabulary,
