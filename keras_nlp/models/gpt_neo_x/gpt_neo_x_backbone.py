@@ -77,7 +77,7 @@ class GPTNeoXBackbone(Backbone):
         # Inputs
         token_ids = keras.Input(shape=(None,), dtype="int32", name="token_ids")
         padding_mask = keras.Input(
-            shape=(None,), dtype="int32", name="padding_mask"
+            shape=(None,), dtype="int32", name="paddin"
         )
 
         # Embed tokens
