@@ -85,7 +85,7 @@ class GPTNeoXBackbone(Backbone):
             input_dim=vocabulary_size,
             output_dim=hidden_dim,
             embeddings_initializer=_gpt_neo_x_kernel_initializer(stddev=0.01),
-            name="embeddings",
+            name="token_embedding",
         )(token_ids)
 
         x = keras.layers.Dropout(
