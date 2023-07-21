@@ -79,13 +79,13 @@ class GPTNeoXBackbone(Backbone):
         padding_mask = keras.Input(
             shape=(None,), dtype="int32", name="paddin"
         )
-
+        #changig token_embedding to embeddings
         # Embed tokens
         token_embedding = keras.layers.Embedding(
             input_dim=vocabulary_size,
             output_dim=hidden_dim,
             embeddings_initializer=_gpt_neo_x_kernel_initializer(stddev=0.01),
-            name="token_embedding",
+            name="embeddings",
         )(token_ids)
 
         x = keras.layers.Dropout(
