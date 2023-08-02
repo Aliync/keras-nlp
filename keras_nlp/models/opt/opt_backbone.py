@@ -132,7 +132,6 @@ class OPTBackbone(Backbone):
             name="layer_norm",
             axis=-1,
             epsilon=1e-5,
-            dtype="float32",
         )(x)
 
         # Instantiate using Functional API Model constructor
